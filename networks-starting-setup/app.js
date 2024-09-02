@@ -68,8 +68,8 @@ app.get('/people', async (req, res) => {
 });
 
 mongoose.connect(
-  'mongodb://localhost:27017/swfavorites',
-  { useNewUrlParser: true },
+  'mongodb://mongodb:27017/swfavorites', 
+  { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (err) {
       console.log(err);
@@ -78,3 +78,4 @@ mongoose.connect(
     }
   }
 );
+
